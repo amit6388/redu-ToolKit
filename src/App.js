@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from './redux/slices/counterSlice';
 import { login, logout } from './redux/slices/authSice';
+// npm install @reduxjs/toolkit react-redux redux-persist
 
 function App() {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ function App() {
         <h2>User Authentication</h2>
         {isAuthenticated ? (
           <div>
-            <p>User is logged in</p>
+            <p>User is logged in...</p>
             <button onClick={() => dispatch(logout())}>Logout</button>
           </div>
         ) : (
